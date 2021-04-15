@@ -4,16 +4,17 @@ pipeline {
     stages {
         stage ('SCM Checkout'){
             steps {
-            git 'https://github.com/TonyK11/time-tracker'
+                   
+                   git 'https://github.com/TonyK11/time-tracker'
             }
         }
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
                 //git 'https://github.com/TonyK11/time-tracker.git'
-
+                //tool name: 'Maven 3.8.1', type: 'maven'
                 // Run Maven on a Unix agent.
-                sh "mvn clean package"
+                sh 'mvn clean package'
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
