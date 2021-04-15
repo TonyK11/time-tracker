@@ -6,7 +6,7 @@ pipeline {
             steps {
                    
                    //git 'https://github.com/TonyK11/time-tracker'
-                git credentialsId: '9664629c-d13e-4c8c-9305-7e01ca0d2437', url: 'https://github.com/TonyK11/time-tracker'
+                git credentialsId: '9664629c-d13e-4c8c-9305-7e01ca0d2437', url: 'https://github.com/TonyK11/time-tracker/pom.xml'
             }
         }
         stage('Build') {
