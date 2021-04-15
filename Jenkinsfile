@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage ('SCM Checkout'){
+            steps {
+            git 'https://github.com/TonyK11/time-tracker'
+            }
+        }
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
